@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sample Online Items and Prices</title>
+  <link rel="stylesheet" href="items1.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Sample Online Items and Prices</h1>
+    <form id="priceForm">
+      <label>Laptop ($800 each):</label>
+      <input type="number" id="laptop" min="0" value="0">
+
+      <label>Smartphone ($400 each):</label>
+      <input type="number" id="smartphone" min="0" value="0">
+
+      <label>Headphones ($50 each):</label>
+      <input type="number" id="headphones" min="0" value="0">
+
+      <label>Tablet ($300 each):</label>
+      <input type="number" id="tablet" min="0" value="0">
+
+      <button type="button" onclick="calculateTotal()">Calculate Total Price</button>
+    </form>
+    <p id="total">Total Price: $0</p>
+  </div>
+
+  <script>
+    function calculateTotal() {
+      const laptop = parseInt(document.getElementById('laptop').value) || 0;
+      const smartphone = parseInt(document.getElementById('smartphone').value) || 0;
+      const headphones = parseInt(document.getElementById('headphones').value) || 0;
+      const tablet = parseInt(document.getElementById('tablet').value) || 0;
+
+      const total = laptop * 800 + smartphone * 400 + headphones * 50 + tablet * 300;
+      document.getElementById('total').textContent = `Total Price: $${total}`;
+    }
+  </script>
+</body>
+</html>
+
+</div>
+</html>
